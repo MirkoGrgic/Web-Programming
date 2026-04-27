@@ -1,0 +1,147 @@
+/* Osnovni reset */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+
+.grafikon-sekcija {
+    text-align: center;
+    padding: 40px;
+}
+
+
+.grafikon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.pie-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+:root {
+    --velicina-grafikona: 500px;
+
+    --drama: #ff6384;
+    --komedija: #36a2eb;
+    --akcija: #ffcd56;
+    --horor: #4bc0c0;
+    --ostalo: #9966ff;
+}
+
+
+.pie-chart {
+    width: var(--velicina-grafikona);
+    height: var(--velicina-grafikona);
+    border-radius: 50%;
+    background: conic-gradient(var(--drama) 0% 30%,
+            var(--komedija) 30% 55%,
+            var(--akcija) 55% 70%,
+            var(--horor) 70% 85%,
+            var(--ostalo) 85% 100%);
+    animation: pojaviSe 1.5s ease;
+}
+
+@keyframes pojaviSe {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pie-chart:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+.legenda {
+    text-align: left;
+}
+
+.stavka {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.boja {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.drama {
+    background: var(--drama);
+}
+
+.komedija {
+    background: var(--komedija);
+}
+
+.akcija {
+    background: var(--akcija);
+}
+
+.horor {
+    background: var(--horor);
+}
+
+.ostalo {
+    background: var(--ostalo);
+}
+
+
+@media (max-width: 768px) {
+
+    .grafikon-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .pie-chart {
+        width: 260px;
+        height: 260px;
+    }
+
+    .legenda {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .stavka {
+        justify-content: center;
+        font-size: 20px;
+    }
+}

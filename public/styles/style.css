@@ -1,0 +1,352 @@
+/* ================== TVOJ POSTOJEĆI CSS (NE DIRAJ) ================== */
+
+/* Opći stilovi */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header i navigacija */
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+}
+
+.nav-menu a:hover {
+    background: #555;
+    transition: 0.2s;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Sekcije */
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox za podatke */
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Kružni grafikon */
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#3498db 0% 40%,
+            #2ecc71 40% 75%,
+            #f1c40f 75% 100%);
+    margin: 0 auto;
+}
+
+/* Flexbox analiza */
+.analysis-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.analysis-box {
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Forma */
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input,
+button {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    margin-top: auto; 
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .data-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .analysis-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-flex input,
+    .form-flex button {
+        width: 100%;
+    }
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    min-width: 150px;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown:focus-within .submenu {
+    display: block;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Tablica */
+table {
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+}
+
+th {
+    background: #0f1f2a;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Slike */
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-images img {
+    width: 300px;
+    height: 345px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================== NOVI DIO (DODAJ ISPOD) ================== */
+
+/* FILTER BOX */
+.filters {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.filters h2 {
+    margin-bottom: 10px;
+}
+
+.filters input {
+    width: 180px;
+    margin: 5px;
+}
+
+/* TABLICA MODERN LOOK */
+#dataTable {
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 600px;
+}
+
+#dataTable th {
+    background: #111;
+}
+
+#dataTable tr:hover {
+    background: #e8f0fe;
+    transition: 0.2s;
+}
+
+/* PLAYLISTA */
+.playlist {
+    background: #110000;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.playlist h3 {
+    margin-bottom: 10px;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.playlist li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* BUTTON FIX ZA TABLICU */
+#dataTable button {
+    width: auto;
+    padding: 5px 10px;
+    background: #e50914;
+}
+
+#dataTable button:hover {
+    background: #b20710;
+}
+
+/* PLAYLIST BUTTON */
+.playlist button {
+    width: 100%;
+    margin-top: 10px;
+    background: #e50914;
+}
+
+.playlist button:hover {
+    background: #b20710;
+}
+
+.saved-playlists {
+    margin: 30px;
+    padding: 20px;
+}
+
+.playlist-box {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.playlist-box h3 {
+    cursor: pointer;
+    margin: 0;
+    color: #111;
+}
+
+.playlist-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.playlist-box button {
+    margin-top: 10px;
+    background: crimson;
+    width: auto;
+    padding: 6px 10px;
+}
