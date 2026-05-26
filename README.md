@@ -15,4 +15,3 @@ SQL inicijalizacija dodaje administratorski racun za demonstraciju CRUD funkcija
 - korisnicko ime: `administrator`
 - lozinka: `Admin123!`
 
-Prije javne objave projekta ovu lozinku treba promijeniti.
