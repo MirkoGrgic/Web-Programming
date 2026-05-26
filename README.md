@@ -1,5 +1,18 @@
-## 🚀 Live Deployment
+# LV4 - Videoteka filmova
 
-Aplikacija je uspješno deployana na **Railway** i može se pogledati ovdje:
+PHP i MySQL verzija postojeceg projekta za temu **Filmovi**.
 
-👉 https://web-programming-production-de4c.up.railway.app
+## Pokretanje u XAMPP-u
+
+1. Pokrenite Apache i MySQL u XAMPP Control Panelu.
+2. Otvorite `http://localhost/Web-Programming/index.php`.
+3. Pristup php bazi podataka: "http://localhost/phpmyadmin/index.php"
+
+## Administratorski pristup
+
+SQL inicijalizacija dodaje administratorski racun za demonstraciju CRUD funkcija:
+
+- korisnicko ime: `administrator`
+- lozinka: `Admin123!`
+
+Prije javne objave projekta ovu lozinku treba promijeniti.

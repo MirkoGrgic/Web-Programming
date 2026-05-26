@@ -164,13 +164,35 @@ footer {
     position: relative;
 }
 
+.menu-dropdown summary {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-dropdown summary:hover,
+.menu-dropdown[open] summary {
+    background: #555;
+}
+
 .submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #333;
-    min-width: 150px;
+    min-width: 230px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
 }
 
 .submenu a {
@@ -183,6 +205,10 @@ footer {
 }
 
 .dropdown:focus-within .submenu {
+    display: block;
+}
+
+.menu-dropdown[open] .submenu {
     display: block;
 }
 
@@ -349,4 +375,266 @@ tr:nth-child(even) {
     background: crimson;
     width: auto;
     padding: 6px 10px;
+}
+
+/* ================== LV4 PHP I MYSQL SUCELJE ================== */
+
+.page-main {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+.nav-menu {
+    flex-wrap: wrap;
+}
+
+.signed-in {
+    margin: 8px 0 0;
+    color: #ddd;
+}
+
+.notice {
+    max-width: 850px;
+    margin: 18px auto;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.notice-success {
+    background: #d8f3df;
+    border: 1px solid #278047;
+    color: #16552e;
+}
+
+.notice-error {
+    background: #fde1e3;
+    border: 1px solid #c63842;
+    color: #842029;
+}
+
+.notice-info {
+    background: #e5f2fb;
+    border: 1px solid #3498db;
+    color: #184d70;
+}
+
+.section-help {
+    color: #555;
+    margin-top: 0;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: end;
+}
+
+.filter-form label,
+.stack-form label,
+.film-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.filter-form input,
+.filter-form select {
+    width: 180px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.filter-form button {
+    width: auto;
+    padding: 11px 22px;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    color: #333;
+    background: white;
+    text-decoration: none;
+}
+
+.secondary-button:hover {
+    background: #eee;
+}
+
+.catalogue {
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.catalogue table {
+    width: 100%;
+}
+
+.catalogue #dataTable {
+    min-width: 980px;
+}
+
+.inline-form {
+    margin: 0;
+}
+
+.inline-form button,
+.action-cell button {
+    width: auto;
+    padding: 7px 12px;
+}
+
+.danger-button {
+    background: #c62828;
+}
+
+.danger-button:hover {
+    background: #8e1d1d;
+}
+
+.auth-card,
+.confirmation-card,
+.admin-form-card {
+    max-width: 650px;
+    margin: 30px auto;
+    background: white;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+.auth-card {
+    max-width: 430px;
+}
+
+.stack-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stack-form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.stack-form button {
+    width: 100%;
+    margin-top: 8px;
+    background: #e50914;
+}
+
+.stack-form button:hover {
+    background: #b20710;
+}
+
+.warning-card {
+    border-left: 6px solid #c62828;
+    text-align: left;
+}
+
+.confirmation-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.confirmation-actions button {
+    width: auto;
+    background: #e50914;
+}
+
+.film-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.film-form input,
+.film-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.film-form .full-row {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-actions button {
+    width: auto;
+    background: #e50914;
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-action {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background: #3498db;
+}
+
+.table-action:hover {
+    background: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .filter-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button,
+    .secondary-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .film-form {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card,
+    .confirmation-card,
+    .admin-form-card {
+        margin: 20px;
+    }
 }

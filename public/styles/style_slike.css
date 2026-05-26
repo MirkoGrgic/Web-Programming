@@ -107,3 +107,89 @@ figcaption {
     font-size: 28px;
   }
 }
+
+.gallery-intro {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.rating-gallery {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.rating-gallery .galerija_slika {
+  padding: 12px;
+  margin: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.rating-summary {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  color: #b20710;
+  font-weight: bold;
+}
+
+.rating-form {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.rating-options {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+}
+
+.rating-options legend {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.rating-options label {
+  cursor: pointer;
+  color: #c5c5c5;
+}
+
+.rating-options input {
+  width: auto;
+  margin: 0 2px 0 0;
+}
+
+.rating-options input:checked + span {
+  color: #e6ae00;
+}
+
+.rating-options span[aria-hidden="true"] {
+  font-size: 21px;
+}
+
+.rating-form button {
+  width: 100%;
+  padding: 9px;
+  background: #e50914;
+}
+
+.rating-form button:hover {
+  background: #b20710;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
